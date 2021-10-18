@@ -34,7 +34,7 @@ public class Account {
         }
     }
 
-    public void openAccount(String name, Integer money) {
+    public synchronized void openAccount(String name, Integer money) {
         this.name = name;
         this.amount = new AtomicInteger(money);
         System.out.println("00：" + name + "开户成功,开户金额为"+money);
